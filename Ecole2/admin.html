@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>👑 Administration École</h1>
+
+    <div class="form-box">
+
+        <input type="text" id="nom" placeholder="Nom Prénom Élève">
+
+        <input type="text" id="masar" placeholder="Numéro Massar">
+
+        <input type="date" id="naissance">
+
+        <select id="niveau">
+            <option>Collège</option>
+            <option>Lycée</option>
+        </select>
+
+        <select id="sexe">
+            <option>Masculin</option>
+            <option>Féminin</option>
+        </select>
+
+        <input type="file" id="photo">
+
+        <h2>Paiement</h2>
+
+        <select id="mois">
+            <option>Janvier</option>
+            <option>Février</option>
+            <option>Mars</option>
+            <option>Avril</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juillet</option>
+            <option>Août</option>
+            <option>Septembre</option>
+            <option>Octobre</option>
+            <option>Novembre</option>
+            <option>Décembre</option>
+        </select>
+
+        <select id="etat">
+            <option>Oui</option>
+            <option>Non</option>
+        </select>
+
+        <button onclick="save()">Enregistrer</button>
+
+    </div>
+
+    <hr>
+
+    <h2>🔎 Recherche filtre</h2>
+
+    <select id="filterNiveau">
+        <option>Tous</option>
+        <option>Collège</option>
+        <option>Lycée</option>
+    </select>
+
+    <select id="filterSexe">
+        <option>Tous</option>
+        <option>Masculin</option>
+        <option>Féminin</option>
+    </select>
+
+    <button onclick="filterSearch()">Rechercher</button>
+
+    <button onclick="downloadCSV()">Télécharger CSV</button>
+
+    <div id="results"></div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
